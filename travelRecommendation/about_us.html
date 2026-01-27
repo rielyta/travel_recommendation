@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Travel Recommendation</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    <header class="sticky inset-0 z-50 border-b border-slate-100">
+    <nav class = "flex-wrap bg-gradient-to-r from-black/80 to-blue-950/80 backdrop-blur-lg p-4 text-white text-center font-bold mx-auto flex justify-between ">
+        <div class="flex items-center mr-3 gap-2">
+        <image src="./image/logo.png" alt="Logo" class=" sm:h-9 h-6"> </image>
+        <span class="text-2xl text-teal-500">TravelMate</span>
+        </div>  
+        <ul class = "flex gap-4 items-center flex-wrap">
+            <!--navigation links-->
+            <a href="./travel_recommendation.html">Home</a>
+            <a href="about_us.html">About</a>
+            <a href="./contact_us.html">Contact US</a>
+        </ul>
+        <div class="flex items-right bg-white p-2 rounded">
+            <!--search bar-->
+            <input type="text" placeholder="Enter a destination or keyword" class="p-2 rounded bg-white text-teal-500 w-64">
+            <!--search and clear buttons-->
+            <button class="text-white p-2 rounded ml-2 bg-teal-500" id="SearchBtn">
+                Search
+            </button>
+            <button class="text-white p-2 rounded ml-2 bg-teal-500" id="ClearBtn">
+                Clear
+            </button>
+        </div>
+    </nav> 
+    </header>
+
+    <section>
+        <!--carousel-->
+        <div class="max-w-8xl mx-auto ">
+            <div class="relative rounded-lg overflow-hidden shadow-lg" data-carousel = "static">
+                <!--carousel wrapper-->
+                <div class="relative" data-carousel-item>
+                    <!--overlay-->
+                    <div class="absolute inset-0 bg-gradient-to-r from-teal-500/50 to-white/10"></div>
+                    <!--carousel items-->
+                    <img src="./image/carousel.png" class="object-cover w-full h-full" alt="Carousel Image 1">
+                </div>
+                </div>
+                <!--social media icons-->
+                <div class = "absolute inset-0 flex flex-col items-right text-white p-7 top-70 right-10 space-y-4 w-25 gap-3">
+                    <img src="./image/twitter.png"  alt="Carousel Image 2">
+                    <img src="./image/facebook.png"  alt="Carousel Image 3">
+                    <img src="./image/instagram.png"  alt="Carousel Image 4">
+                    <img src="./image/youtubr.png"  alt="Carousel Image 5">
+                </div>
+                 <!--text on carousel 1-->
+                <div class="absolute inset-0 flex flex-col items-left text-white p-7 top-30 left-40">
+                    <h2 class="text-6xl font-bold mb-8 mr-200">About Us</h2>
+                    <p class="text-lg mr-180">Welcome to Our Company! We are a team of passionate individuals deducated to providing excelent service products to our customers. Our mission is to provide the best experience for people travelling to diffrent destination around the world</p>
+                    <p class="text-lg mr-180">Our values include integrity, innovation, customer satisffaction, and teamwork. We believe in putting our customers first and working together to achieve our goals.</p>
+                    <p class="text-lg mr-180">Feel free to explore our website to learn more about what to offer</p>
+                </div> 
+                <!--text on carousel 2-->
+                <div class ="absolute flex items-left text-white p-7 top-120 left-50  gap-6">
+                    <h2 class="text-6xl font-bold mb-8 ">Our Team</h2>
+                    <!--CEO-->
+                    <div>
+                       <img src="./image/people.png" alt="CEO Image" class="w-10 h-10 rounded-full mb-4">
+                       <!--name-->
+                          <h3 class="text-xl font-semibold">John Doe</h3>
+                            <p class="text-lg">John is responsible for...</p>
+                            <button class="mt-2 p-2 w-40 bg-blue-700 text-white rounded transition duration-300">CEO</button>
+                    </div>
+                    <!--team lead-->
+                    <div>
+                       <img src="./image/people.png" alt="Team Lead Image" class="w-10 h-10 rounded-full mb-4">
+                       <!--name-->
+                          <h3 class="text-xl font-semibold">Jane Smith</h3>
+                            <p class="text-lg">Jane leads the team with...</p>
+                            <button class="mt-2 p-2 w-40 bg-blue-700 text-white rounded transition duration-300">Team Lead</button>
+                    </div>
+                    <!--delivery head -->
+                    <div>
+                       <img src="./image/people.png" alt="Delivery Head Image" class="w-10 h-10 rounded-full mb-4">
+                       <!--name-->
+                          <h3 class="text-xl font-semibold">Mike Johnson</h3>
+                            <p class="text-lg">Mike oversees the delivery...</p>
+                            <button class="mt-2 p-2 w-40 bg-blue-700 text-white rounded transition duration-300">Delivery Head</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+</body>
+</html>
