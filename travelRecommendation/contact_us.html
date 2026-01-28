@@ -10,7 +10,7 @@
 <body>
 
     <header class="sticky inset-0 z-50 border-b border-slate-100">
-    <nav class = "flex-wrap bg-gradient-to-r from-black/80 to-blue-950/80 backdrop-blur-lg p-4 text-white text-center font-bold mx-auto flex justify-between i">
+    <nav class = "flex-wrap bg-gradient-to-r from-black/80 to-blue-950/80 backdrop-blur-lg p-4 text-white text-center font-bold mx-auto flex justify-between ">
         <div class="flex items-center mr-3 gap-2">
         <image src="./image/logo.png" alt="Logo" class=" sm:h-9 h-6"> </image>
         <span class="text-2xl text-teal-500">TravelMate</span>
@@ -54,13 +54,35 @@
                     <img src="./image/instagram.png"  alt="Carousel Image 4">
                     <img src="./image/youtubr.png"  alt="Carousel Image 5">
                 </div>
-                 <!--text on carousel-->
-                <div class="absolute inset-0 flex flex-col items-left text-white p-7 top-60 ">
-                    <h2 class="text-6xl font-bold mb-8 mr-200">Explore Dream Destinations</h2>
-                    <p class="text-lg mr-280">It encourages exploration of unfimiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder</p>
-                    <button id = "BookBtn" type = "button" class="w-30 m-2 p-2 bg-teal-600 text-white rounded hover:bg-teal-600 transition duration-300">Book Now</button>
+                <div class ="absolute flex items-left text-white p-7 top-30 left-40  gap-6">
+                <div class="absolute inset-0 flex flex-col items-left text-white p-7 top-50 left-40 pointer-events-none">
+                    <h2 class="text-6xl font-bold mb-8">Contact Us</h2>
+                    <p class="text-lg">Get in Touch</p>
                 </div> 
-            </div>
+                <div class="bg-white/20 p-6 rounded-lg shadow-lg w-140 ml-130 mt-20">
+                    <form action="#" method="POST" class="space-y-4">
+                        <!--Name-->
+                        <div>
+                            <label for="name" class="block text-lg font-medium text-gray-900">Name:</label>
+                            <input type="text" id="name" name="name" required class="w-full p-2 border border-gray-300 rounded mt-1">
+                        </div>
+                        <!--Email-->
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-gray-900">Email:</label>
+                            <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded mt-1">    
+                        </div>
+                        <!--Message-->
+                        <div>
+                            <label for="message" class="block text-lg font-medium text-gray-900">Message:</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full p-2 border border-gray-300 rounded mt-1"></textarea>
+                        </div>
+                        <!--Submit Button-->
+                        <div>
+                            <button type="submit" class="w-full p-2 bg-teal-500 text-white rounded hover:bg-teal-600 transition duration-300">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
         </div>
     </section>
 
