@@ -19,8 +19,8 @@ fetch('./travel_recommendation_api.json')
         temples = data.temples;
         beaches = data.beaches;
 
-        cities = countries.flatMap(country => country.cities.map(city=> ({
-            ...city,
+        cities = countries.flatMap(country => country.cities.map(city => ({
+            name: city.name,
             country: country.name
         })));
 
@@ -45,19 +45,21 @@ searchBtn.addEventListener('click', () => {
 
 
     //search in countries
-    countries.forEach(countries => {
-        if (countries.name.toLowerCase().includes(keyword)) {
-            searchResults.innerHTML += `<p>Country: ${countries.name}</p>`;
-            resultsFound = true;
-        }
-    });
-
-    //search in cities
-    cities.forEach(city => {
-        if (city.name.toLowerCase().includes(keyword)) {
-            searchResults.innerHTML += `<p>City: ${city.name}, Country: ${city.country}</p>`;
-            resultsFound = true;
-        }
+    countries.forEach(country => {
+        country.cities.forEach(city => {
+            if (city.name.toLowerCase().includes(keyword)) {
+                searchResults.innerHTML += 
+                `<img src="${city.imageUrl}" alt="${city.name}" width="350" height="90" opacity="0.8" pointer-events-none>
+                <!--cities name-->
+                <h4 style="font-size: 18px; font-weight: bold; margin: 10px 0 5px 0;">${city.name}</h4>
+                <!--description-->
+                <p style="font-size: 14px; color: #555;">${city.description}</p>
+                <!--button-->
+                <button style="padding: 8px 12px; background-color: #18d1b5; color: white; border: none; border-radius: 4px; cursor: pointer;">Visit</button>
+                `;
+                resultsFound = true;
+            }
+        });
     });
 
     //search in temples
