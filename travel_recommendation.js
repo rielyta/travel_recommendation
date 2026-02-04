@@ -5,6 +5,7 @@ const searchResults = document.getElementById('searchResults');
 
 const countryTimeZone = {
     "Indonesia": "Asia/Jakarta",
+    "Australia": "Australia/Sydney",
     "Japan": "Asia/Tokyo",
     "Brazil": "America/Sao_Paulo",
     "Cambodia": "Asia/Phnom_Penh",
