@@ -91,8 +91,8 @@ searchBtn.addEventListener('click', () => {
         country.cities.forEach(city => {
             if (city.name.toLowerCase().includes(keyword)) {
                 searchResults.innerHTML += 
-                `<div class="text-black bg-white rounded-lg w-100 h-120 items-center p-4 shadow-md">
-                <img src="${city.imageUrl}" alt="${city.name}" width="350" height="90" opacity="0.8" pointer-events-none>
+                `<div class="text-black bg-white rounded-lg w-full max-w-md items-center p-4 shadow-md">
+                <img src="${city.imageUrl}" alt="${city.name}" class="w-full h-48 object-cover rounded" opacity="0.8" pointer-events-none>
                 <!--cities name-->
                 <h4 style="font-size: 18px; font-weight: bold; margin: 10px 0 5px 0;">${city.name}</h4>
                 <!--description-->
@@ -113,8 +113,8 @@ searchBtn.addEventListener('click', () => {
         if (temples.name.toLowerCase().includes(keyword) || "Temples".toLowerCase().includes(keyword) ) {
             const templeLocation = getLocationFromPlaceName(temples.name);
             searchResults.innerHTML +=
-            `<div class="text-black bg-white rounded-lg w-100 h-120 items-center p-4 shadow-md">
-            <img src="${temples.imageUrl}" alt="${temples.name}" width="350" height="90" opacity="0.8" pointer-events-none>
+            `<div class="text-black bg-white rounded-lg w-full max-w-md items-center p-4 shadow-md">
+            <img src="${temples.imageUrl}" alt="${temples.name}" class="w-full h-48 object-cover rounded" opacity="0.8" pointer-events-none>
             <!--temple name-->
             <h4 style="font-size: 18px; font-weight: bold; margin: 10px 0 5px 0;">${temples.name}</h4>
             <!--description-->
@@ -135,8 +135,8 @@ searchBtn.addEventListener('click', () => {
         if (beaches.name.toLowerCase().includes(keyword) || "Beaches".toLowerCase().includes(keyword)) {
             const beachLocation = getLocationFromPlaceName(beaches.name);
             searchResults.innerHTML +=
-            `<div class="text-black bg-white rounded-lg w-100 h-120 items-center p-4 shadow-md">
-            <img src="${beaches.imageUrl}" alt="${beaches.name}" width="350" height="90" opacity="0.8" pointer-events-none>
+            `<div class="text-black bg-white rounded-lg w-full max-w-md items-center p-4 shadow-md">
+            <img src="${beaches.imageUrl}" alt="${beaches.name}" class="w-full h-48 object-cover rounded" opacity="0.8" pointer-events-none>
             <!--beach name-->
             <h4 style="font-size: 18px; font-weight: bold; margin: 10px 0 5px 0;">${beaches.name}</h4>
             <!--description-->

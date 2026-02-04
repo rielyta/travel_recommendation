@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,25 +9,25 @@
 <body>
 
     <header class="sticky inset-0 z-50 border-b border-slate-100">
-    <nav class = "flex-wrap bg-gradient-to-r from-black/80 to-blue-950/80 backdrop-blur-lg p-4 text-white text-center font-bold mx-auto flex justify-between i">
-        <div class="flex items-center mr-3 gap-2">
+    <nav class = "flex-wrap bg-gradient-to-r from-black/80 to-blue-950/80 backdrop-blur-lg p-4 text-white text-center font-bold mx-auto flex justify-between i max-sm:flex-col max-sm:gap-4">
+        <div class="flex items-center mr-3 gap-2 max-sm:mr-0 max-sm:justify-center">
         <image src="./image/logo.png" alt="Logo" class=" sm:h-9 h-6"> </image>
         <span class="text-2xl text-teal-500">TravelMate</span>
         </div>  
-        <ul class = "flex gap-4 items-center flex-wrap">
+        <ul class = "flex gap-4 items-center flex-wrap max-sm:justify-center">
             <!--navigation links-->
             <a href="travel_recommendation.html">Home</a>
             <a href="./about_us.html">About</a>
             <a href="./contact_us.html">Contact US</a>
         </ul>
-        <div class="flex items-right bg-white p-2 rounded">
+        <div class="flex items-right bg-white p-2 rounded max-sm:flex-col max-sm:gap-2 max-sm:w-full">
             <!--search bar-->
-            <input id="inputSearch" type="text" placeholder="Enter a destination or keyword" class="p-2 rounded bg-white text-teal-500 w-64">
+            <input id="inputSearch" type="text" placeholder="Enter a destination or keyword" class="p-2 rounded bg-white text-teal-500 w-64 max-sm:w-full">
             <!--search and clear buttons-->
-            <button class="text-white p-2 rounded ml-2 bg-teal-500" id="searchBtn">
+            <button class="text-white p-2 rounded ml-2 bg-teal-500 max-sm:ml-0" id="searchBtn">
                 Search
             </button>
-            <button class="text-white p-2 rounded ml-2 bg-teal-500" id="clearBtn">
+            <button class="text-white p-2 rounded ml-2 bg-teal-500 max-sm:ml-0" id="clearBtn">
                 Clear
             </button>
         </div>
@@ -37,30 +37,30 @@
     <section>
         <!--carousel-->
         <div class="max-w-8xl mx-auto ">
-            <div class="relative rounded-lg overflow-hidden shadow-lg" data-carousel = "static">
+            <div class="relative rounded-lg overflow-hidden shadow-lg max-sm:min-h-[70vh]" data-carousel = "static">
                 <!--carousel wrapper-->
                 <div class="relative" data-carousel-item>
                     <!--overlay-->
                     <div class="absolute inset-0 bg-gradient-to-r from-teal-500/50 to-white/10"></div>
                     <!--carousel items-->
-                    <img src="./image/carousel.png" class="object-cover w-full h-full" alt="Carousel Image 1">
+                    <img src="./image/carousel.png" class="object-cover w-full h-full max-sm:h-[70vh]" alt="Carousel Image 1">
                 </div>
                 </div>
                 <!--search result in front carousel-->
-                <div id="searchResults" class="absolute inset-0 flex flex-col items-center  top-15 left-275 overflow-y-auto w-100 h-90 overflow-hidden">
+                <div id="searchResults" class="absolute inset-0 flex flex-col items-center  top-15 left-285 overflow-y-auto w-100 h-90 overflow-hidden max-sm:top-24 max-sm:left-0 max-sm:w-full max-sm:px-4 max-sm:h-[60vh]">
                 </div>
                 <!--social media icons-->
-                <div class = "absolute inset-0 flex flex-col items-right text-white p-7 top-70 right-10 space-y-4 w-25 gap-3">
+                <div class = "absolute inset-0 flex flex-col items-right text-white p-7 top-70 right-10 space-y-4 w-25 gap-3 max-sm:hidden">
                     <img src="./image/twitter.png"  alt="Carousel Image 2">
                     <img src="./image/facebook.png"  alt="Carousel Image 3">
                     <img src="./image/instagram.png"  alt="Carousel Image 4">
                     <img src="./image/youtubr.png"  alt="Carousel Image 5">
                 </div>
                  <!--text on carousel-->
-                <div class="absolute inset-0 flex flex-col items-left text-white p-7 top-60 left-40 ">
-                    <h2 class="text-6xl font-bold mb-8 mr-200">Explore Dream Destinations</h2>
-                    <p class="text-lg mr-250">It encourages exploration of unfimiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder</p>
-                    <button id = "BookBtn" type = "button" class="w-30 m-2 p-2 bg-teal-600 text-white rounded hover:bg-teal-600 transition duration-300">Book Now</button>
+                <div class="absolute inset-0 flex flex-col items-left text-white p-7 top-60 left-40 max-sm:top-24 max-sm:left-4 max-sm:right-4">
+                    <h2 class="text-6xl font-bold mb-8 mr-200 max-sm:text-3xl max-sm:mr-0">Explore Dream Destinations</h2>
+                    <p class="text-lg mr-250 max-sm:text-sm max-sm:mr-0">It encourages exploration of unfimiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder</p>
+                    <button id = "BookBtn" type = "button" class="w-30 m-2 p-2 bg-teal-600 text-white rounded hover:bg-teal-600 transition duration-300 max-sm:w-32">Book Now</button>
                 </div> 
             </div>
         </div>

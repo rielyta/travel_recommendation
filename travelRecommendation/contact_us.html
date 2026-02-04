@@ -10,25 +10,25 @@
 <body>
 
     <header class="sticky inset-0 z-50 border-b border-slate-100">
-    <nav class = "flex-wrap bg-gradient-to-r from-black/80 to-blue-950/80 backdrop-blur-lg p-4 text-white text-center font-bold mx-auto flex justify-between ">
-        <div class="flex items-center mr-3 gap-2">
+    <nav class = "flex-wrap bg-gradient-to-r from-black/80 to-blue-950/80 backdrop-blur-lg p-4 text-white text-center font-bold mx-auto flex justify-between max-sm:flex-col max-sm:gap-4">
+        <div class="flex items-center mr-3 gap-2 max-sm:mr-0 max-sm:justify-center">
         <image src="./image/logo.png" alt="Logo" class=" sm:h-9 h-6"> </image>
         <span class="text-2xl text-teal-500">TravelMate</span>
         </div>  
-        <ul class = "flex gap-4 items-center flex-wrap">
+        <ul class = "flex gap-4 items-center flex-wrap max-sm:justify-center">
             <!--navigation links-->
             <a href="./travel_recommendation.html">Home</a>
             <a href="./about_us.html">About</a>
             <a href="contact_us.html">Contact US</a>
         </ul>
-        <div class="flex items-right bg-white p-2 rounded">
+        <div class="flex items-right bg-white p-2 rounded max-sm:flex-col max-sm:gap-2 max-sm:w-full">
             <!--search bar-->
-            <input type="text" placeholder="Enter a destination or keyword" class="p-2 rounded bg-white text-teal-500 w-64">
+            <input id="inputSearch" type="text" placeholder="Enter a destination or keyword" class="p-2 rounded bg-white text-teal-500 w-64 max-sm:w-full">
             <!--search and clear buttons-->
-            <button class="text-white p-2 rounded ml-2 bg-teal-500" id="SearchBtn">
+            <button class="text-white p-2 rounded ml-2 bg-teal-500 max-sm:ml-0" id="searchBtn">
                 Search
             </button>
-            <button class="text-white p-2 rounded ml-2 bg-teal-500" id="ClearBtn">
+            <button class="text-white p-2 rounded ml-2 bg-teal-500 max-sm:ml-0" id="clearBtn">
                 Clear
             </button>
         </div>
@@ -47,19 +47,22 @@
                     <img src="./image/carousel.png" class="object-cover w-full h-full" alt="Carousel Image 1">
                 </div>
                 </div>
+                <!--search result in front carousel-->
+                <div id="searchResults" class="absolute inset-0 flex flex-col items-center  top-15 left-285 overflow-y-auto w-100 h-90 overflow-hidden max-sm:top-24 max-sm:left-0 max-sm:w-full max-sm:px-4 max-sm:h-[60vh]">
+                </div>
                 <!--social media icons-->
-                <div class = "absolute inset-0 flex flex-col items-right text-white p-7 top-70 right-10 space-y-4 w-25 gap-3">
+                <div class = "absolute inset-0 flex flex-col items-right text-white p-7 top-70 right-10 space-y-4 w-25 gap-3 max-sm:hidden">
                     <img src="./image/twitter.png"  alt="Carousel Image 2">
                     <img src="./image/facebook.png"  alt="Carousel Image 3">
                     <img src="./image/instagram.png"  alt="Carousel Image 4">
                     <img src="./image/youtubr.png"  alt="Carousel Image 5">
                 </div>
-                <div class ="absolute flex items-left text-white p-7 top-30 left-40  gap-6">
-                <div class="absolute inset-0 flex flex-col items-left text-white p-7 top-50 left-40 pointer-events-none">
-                    <h2 class="text-6xl font-bold mb-8">Contact Us</h2>
-                    <p class="text-lg">Get in Touch</p>
+                <div class ="absolute flex items-left text-white p-7 top-30 left-40  gap-6 max-sm:top-16 max-sm:left-4 max-sm:right-4 max-sm:flex-col">
+                <div class="absolute inset-0 flex flex-col items-left text-white p-7 top-50 left-40 pointer-events-none max-sm:top-10 max-sm:left-4">
+                    <h2 class="text-6xl font-bold mb-8 max-sm:text-3xl">Contact Us</h2>
+                    <p class="text-lg max-sm:text-sm">Get in Touch</p>
                 </div> 
-                <div class="bg-white/20 p-6 rounded-lg shadow-lg w-140 ml-130 mt-20">
+                <div class="bg-white/20 p-6 rounded-lg shadow-lg w-140 ml-130 mt-20 max-sm:w-full max-sm:ml-0 max-sm:mt-24">
                     <form action="#" method="POST" class="space-y-4">
                         <!--Name-->
                         <div>
@@ -87,5 +90,6 @@
     </section>
 
     <footer></footer>
+    <script src="./travel_recommendation.js"></script>
 </body>
 </html>
