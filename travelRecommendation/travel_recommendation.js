@@ -49,13 +49,15 @@ searchBtn.addEventListener('click', () => {
         country.cities.forEach(city => {
             if (city.name.toLowerCase().includes(keyword)) {
                 searchResults.innerHTML += 
-                `<img src="${city.imageUrl}" alt="${city.name}" width="350" height="90" opacity="0.8" pointer-events-none>
+                `<div class="text-black bg-white rounded-lg w-100 h-120 items-center p-4 shadow-md">
+                <img src="${city.imageUrl}" alt="${city.name}" width="350" height="90" opacity="0.8" pointer-events-none>
                 <!--cities name-->
                 <h4 style="font-size: 18px; font-weight: bold; margin: 10px 0 5px 0;">${city.name}</h4>
                 <!--description-->
                 <p style="font-size: 14px; color: #555;">${city.description}</p>
                 <!--button-->
                 <button style="padding: 8px 12px; background-color: #18d1b5; color: white; border: none; border-radius: 4px; cursor: pointer;">Visit</button>
+                </div>
                 `;
                 resultsFound = true;
             }
@@ -63,20 +65,43 @@ searchBtn.addEventListener('click', () => {
     });
 
     //search in temples
-    temples.forEach(temple => {
-        if (temple.name.toLowerCase().includes(keyword) || temple.location.toLowerCase().includes(keyword)) {
-            searchResults.innerHTML += `<p>Temple: ${temple.name}, Location: ${temple.location}</p>`;
-            resultsFound = true;
+    temples.forEach(temples => {
+        if (temples.name.toLowerCase().includes(keyword) || "Temples".toLowerCase().includes(keyword) ) {
+            searchResults.innerHTML +=
+            `<div class="text-black bg-white rounded-lg w-100 h-120 items-center p-4 shadow-md">
+            <img src="${temples.imageUrl}" alt="${temples.name}" width="350" height="90" opacity="0.8" pointer-events-none>
+            <!--temple name-->
+            <h4 style="font-size: 18px; font-weight: bold; margin: 10px 0 5px 0;">${temples.name}</h4>
+            <!--description-->
+            <p style="font-size: 14px; color: #555;">${temples.description}</p>
+            <!--button-->
+            <button style="padding: 8px 12px; background-color: #18d1b5; color: white; border: none; border-radius: 4px; cursor: pointer;">Visit</button>
+            </div>
+            `;
+            resultsFound = true;    
+        
         }
     });
 
     //search in beaches
-    beaches.forEach(beach => {
-        if (beach.name.toLowerCase().includes(keyword) || beach.location.toLowerCase().includes(keyword)) {
-            searchResults.innerHTML += `<p>Beach: ${beach.name}, Location: ${beach.location}</p>`;
-            resultsFound = true;
+    beaches.forEach(beaches => {
+        if (beaches.name.toLowerCase().includes(keyword) || "Beaches".toLowerCase().includes(keyword) ) {
+            searchResults.innerHTML +=
+            `<div class="text-black bg-white rounded-lg w-100 h-120 items-center p-4 shadow-md">
+            <img src="${beaches.imageUrl}" alt="${beaches.name}" width="350" height="90" opacity="0.8" pointer-events-none>
+            <!--beach name-->
+            <h4 style="font-size: 18px; font-weight: bold; margin: 10px 0 5px 0;">${beaches.name}</h4>
+            <!--description-->
+            <p style="font-size: 14px; color: #555;">${beaches.description}</p>
+            <!--button-->
+            <button style="padding: 8px 12px; background-color: #18d1b5; color: white; border: none; border-radius: 4px; cursor: pointer;">Visit</button>
+            </div>
+            `;
+            resultsFound = true;    
+        
         }
     });
+
 
     if (!resultsFound) {
         searchResults.innerHTML = '<p>No results found.</p>';
